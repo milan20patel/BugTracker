@@ -1,0 +1,45 @@
+.dark-theme {
+    background-color: #333;
+    color: rgb(255, 0, 0);
+}
+
+.dark-theme .modal-content {
+    background-color: #222;
+    color: rgb(255, 0, 0);
+}
+
+.dark-theme .btn-primary {
+    background-color: #007bff;
+    border-color: #007bff;
+}
+
+.dark-theme .btn-primary:hover {
+    background-color: #0056b3;
+    border-color: #0056b3;
+}
+
+.dark-theme .btn-success {
+    background-color: #28a745;
+    border-color: #28a745;
+}
+
+.dark-theme .btn-success:hover {
+    background-color: #218838;
+    border-color: #218838;
+}
+
+.dark-theme .btn-danger {
+    background-color: #dc3545;
+    border-color: #dc3545;
+}
+
+.dark-theme .btn-danger:hover {
+    background-color: #c82333;
+    border-color: #c82333;
+}
+
+.dark-theme .alert {
+    color: white;
+    background-color: #343a40;
+    border-color: #343a40;
+}

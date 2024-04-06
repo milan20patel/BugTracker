@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bug Tracker</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
+        integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body class="dark-theme">
+    <div class="container">
+        <h1 class="text-center my-5 text-light">Bug Tracker</h1>
+        <div id="bugList" class="list-group"></div>
+        <div class="text-center mt-3">
+            <button type="button" class="btn btn-primary mr-2" data-toggle="modal" data-target="#addBugModal">Add
+                Bug</button>
+            <button id="updateBugBtn" type="button" class="btn btn-success mr-2" disabled>Update Bug</button>
+            <button id="deleteBugBtn" type="button" class="btn btn-danger" disabled>Delete Bug</button>
+        </div>
+    </div>
+
+    <!-- Modal for adding a bug to the list -->
+    <div id="addBugModal" class="modal fade" tabindex="-1" role="dialog">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title">Add New Bug</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <form id="addBugForm">
+                        <div class="form-group">
+                            <label for="bugId">Bug ID</label>
+                            <input type="text" class="form-control" id="bugId" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="bugDescription">Description</label>
+                            <input type="text" class="form-control" id="bugDescription" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="bugCriticality">Criticality</label>
+                            <select class="form-control" id="bugCriticality" required>
+                                <option value="0">Low</option>
+                                <option value="1">Medium</option>
+                                <option value="2">High</option>
+                            </select>
+                        </div>
+                        <button type="submit" class="btn btn-primary">Add Bug</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Modal for updating a bug description -->
+    <div id="updateBugModal" class="modal fade" tabindex="-1" role="dialog">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title">Update Bug Description</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <form id="updateBugForm">
+                        <div class="form-group">
+                            <label for="updatedBugDescription">Description</label>
+                            <input type="text" class="form-control" id="updatedBugDescription" required>
+                        </div>
+                        <button type="submit" class="btn btn-primary">Update Description</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- jQuery, Bootstrap, and Web3 -->
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
+        integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
+        crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"
+        integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/web3@latest/dist/web3.min.js"></script>
+    <script src="config.js"></script>
+    <script src="getAccount.js"></script>
+    <script src="app.js"></script>
+</body>
+
+</html>
